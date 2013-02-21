@@ -115,6 +115,7 @@ public class EinsteinDefenseThread extends Thread {
 
 	public void setRunning(boolean running) {
 		this.running = running;
+		// TODO: if running == false, call onDestroy() on activity? BUT! call onPause() and onStop() first?! (wait, these should be called automatically by onDestroy()? ) NEVERMIND! just use "finish()", this will call onDestroy() etc. 
 	}
 
 	public boolean isRunning() {
@@ -225,6 +226,7 @@ public class EinsteinDefenseThread extends Thread {
 
 
 					// update image positions
+					// note: lint warning here: wrong call, should be draw()?
 					mainView.onDraw(canvas);
 					
 					if (scoreManager.getLife() == 0) {
@@ -279,7 +281,7 @@ public class EinsteinDefenseThread extends Thread {
 			//mainView.onDraw(mainView.getHolder().lockCanvas());
 			//((Activity)context).setContentView(new TitleScreen(context));
 			//EinsteinDefenseActivity.loadTitleScreen();
-			
+			EinsteinDefenseActivity.activity.finish();
 		} 
 		
 		

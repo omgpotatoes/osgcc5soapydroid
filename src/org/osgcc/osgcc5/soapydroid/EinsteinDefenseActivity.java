@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-import org.osgcc.osgcc5.soapydroid.R ;
 import org.osgcc.osgcc5.soapydroid.title.TitleScreen;
 
 import android.app.Activity;
@@ -25,7 +24,7 @@ import android.view.SurfaceView;
 import android.view.Window;
 
 public class EinsteinDefenseActivity extends Activity {
-
+	
 	/**
 	 * tag for debugging data in output logfile
 	 */
@@ -52,7 +51,7 @@ public class EinsteinDefenseActivity extends Activity {
 	/**
 	 * Reference to activity object.
 	 */
-	private static EinsteinDefenseActivity activity;
+	public static EinsteinDefenseActivity activity;
 	
 	private MediaPlayer mediaPlayer;
 	

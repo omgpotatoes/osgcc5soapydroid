@@ -272,6 +272,7 @@ public class EinsteinDefensePanel extends SurfaceView implements SurfaceHolder.C
 			gameOverPainter.setAntiAlias(true);
 			canvas.drawText("GAME OVER  :-(   score: "+scoreManager.getScore(), 55, 320, gameOverPainter);
 			
+			
 		} else if (invaders.size() == 0) {
 			
 			Paint levelWinPainter = new Paint();
@@ -304,7 +305,7 @@ public class EinsteinDefensePanel extends SurfaceView implements SurfaceHolder.C
 		
 	}
 
-	
+	// TODO proper ending of thread without crash?
 	public void surfaceDestroyed(SurfaceHolder arg0) {
 		boolean retry = true;
 		gameThread.setRunning(false);
